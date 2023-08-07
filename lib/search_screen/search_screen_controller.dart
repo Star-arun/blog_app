@@ -2,11 +2,8 @@ import 'package:blog_app/model/newModel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-class SearchScreenController extends GetxController{
-
+class SearchScreenController extends GetxController {
   RxList<Result> getResultSearch = <Result>[].obs;
-
 
   Rx<TextEditingController> searchController = TextEditingController().obs;
 
@@ -17,5 +14,4 @@ class SearchScreenController extends GetxController{
 
   RxBool onchange = false.obs;
   RxBool isLoading = false.obs;
-
 }

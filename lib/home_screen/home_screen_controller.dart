@@ -25,27 +25,6 @@ class HomeScreenController extends GetxController {
     super.onInit();
   }
 
-  // tempResponce(){
-  // //  OverallData responce = OverallData.fromJson(tempData);
-  // //  OverallData responce = OverallData.fromJson(json.decode(json.encode(tempData)));
-  //  OverallData responce = OverallData.fromJson(json.decode(tempData));
-
-  //  print("-----------11----${responce.results!.first.createdTime}");
-  //  print("-----------11111----${responce.results!.length}");
-
-  //  getResult.value = responce.results!;
-
-  // //  for(var i =0; i< getResult.length; i++){
-  // //   print(getResult[i].paragraph
-  // //                                               ?.richText?.first.plainText
-  // //                                               .toString());
-  // //  }
-
-  //  print("---------------${getResult.first.createdTime}");
-  //  print("------33---------${getResult.first.paragraph!.richText![6].plainText.toString()}");
-
-  // }
-
   dashboardApi() async {
     isLoading.value = true;
     // Temperatures result = Temperatures.fromJson(await CommonRepo.getAPI(
@@ -60,19 +39,6 @@ class HomeScreenController extends GetxController {
     } else {
       isLoading.value = false;
     }
-
-    //  print(result.results);
-// print("api responce");
-//     print(result);
-    // getResult.value = result.results!;
-
-    // print(getResult);
-
-    // Welcome result = Welcome.fromJson(await CommonRepo.getUsers());
-
-    // CommonRepo.getUsers(endpoint).then((value){
-    // print(value.results);
-    // });
   }
 
   //==============
@@ -91,18 +57,5 @@ class HomeScreenController extends GetxController {
     );
 
     print(response.body);
-
-    // if (response.statusCode == 200) {
-    //   final data = json.decode(response.body);
-    //   if (data['results'] != null) {
-
-    //       getResult.value = List.from(data['results']);
-    //       print(getResult);
-
-    //   }
-    // } else {
-    //   // Handle error
-    //   print('API request failed with status code ${response.statusCode}');
-    // }
   }
 }
